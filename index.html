@@ -15,6 +15,13 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Audio element to play a looping song on page load -->
+ <audio id="bg-music" autoplay loop preload="auto">
+  <source src="Laufey-Piano.mp3" type="audio/mpeg">
+  <source src="song.ogg" type="audio/ogg">  <!-- Optional fallback -->
+  Your browser does not support the audio element.
+</audio>
+
     <!-- Envelope Screen -->
     <div id="envelope-container">
       <img src="envelope.png" alt="Envelope" id="envelope" />
