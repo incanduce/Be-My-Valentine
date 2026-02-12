@@ -70,3 +70,11 @@ yesBtn.addEventListener("click", () => {
 
     finalText.style.display = "block";
 });
+
+// Play audio on first user interaction (e.g., click anywhere)
+document.addEventListener('click', function() {
+  const audio = document.getElementById('bg-music');
+  if (audio && audio.paused) {
+    audio.play().catch(e => console.log('Autoplay blocked:', e));
+  }
+}, { once: true });  // 'once' ensures it only triggers once
